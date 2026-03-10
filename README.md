@@ -84,13 +84,8 @@ All table names, file paths, and validation thresholds are in config/config.yaml
 
 Tests
 
-Tests are in the tests/ folder and run locally using pytest with a local Spark session — no Databricks connection needed.
-
-To run:
-
-    pip install pyspark pytest
-    pytest tests/
-
+Tests are in the tests/ folder
+To run we have run_test.py created under notebooks/
 The tests cover ingestion utilities, all transformation rules (null handling, email and phone validation, discount and quantity checks, date parsing, joins), and the gold aggregation logic.
 
 Note: There are assumptions as per the data, which can be discussed during our discussion.
