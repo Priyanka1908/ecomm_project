@@ -1,0 +1,27 @@
+catalog: ecomm
+
+paths:
+  raw: "/Volumes/ecomm/bronze/datalake_volume/"
+  files:
+    orders: "Orders.json"
+    products: "Products.csv"
+    customer: "Customer.xlsx"
+
+tables:
+  bronze:
+    orders: "ecomm.bronze.orders"
+    products: "ecomm.bronze.products"
+    customer: "ecomm.bronze.customer"
+  silver:
+    customer: "ecomm.silver.customer"
+    products: "ecomm.silver.products"
+    sales: "ecomm.silver.sales"
+  gold:
+    profit_aggregation: "ecomm.gold.profit_aggregation"
+
+validation:
+  discount_min: 0
+  discount_max: 1
+  quantity_min: 1
+  phone_min_length: 8
+  date_format: "d/M/yyyy"
